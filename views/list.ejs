@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ToDO App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/styles/styles.css">
-    </head>
-    <body>
+<%- include("header")  -%> 
         <div class="box" id="heading">
             <h1><%= listTitle %></h1>       
         </div>
@@ -26,8 +17,4 @@
                 <button type="submit" name="list" value=<%= listTitle %> >+</button>
             </form>
         </div>
-    </body>
-    <footer>
-        Copyright 2020 @Abiduzzaman Abid
-    </footer>
-</html>
+<%- include("footer")  -%> 
