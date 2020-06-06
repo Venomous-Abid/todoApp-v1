@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="box" id="heading">
-            <h1><%= kindofDay %></h1>       
+            <h1><%= listTitle %></h1>       
         </div>
         <div class="box">
             <%  for (var i=0; i<newListItems.length; i++){ %>
@@ -23,8 +23,11 @@
         
                 <input type="text" name="newitem" placeholder="Type New Item" autocomplete="off">
         
-                <button type="submit" name="button">+</button>
+                <button type="submit" name="list" value=<%= listTitle %> >+</button>
             </form>
         </div>
     </body>
+    <footer>
+        Copyright 2020 @Abiduzzaman Abid
+    </footer>
 </html>
