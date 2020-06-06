@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +10,17 @@
     <body>
         <h1><%= kindofDay %></h1> 
         
-        <script src="" async defer></script>
+    <ul>
+       <%  for (var i=0; i<newListItems.length; i++){ %>
+            <li><%= newListItems[i] %> </li>    
+       <% } %>  
+    </ul>
+        
+    <form class="" action="/" method="POST">
+        
+        <input type="text" name="newitem">
+
+        <button type="submit" name="button">Add</button>
+    </form>
     </body>
 </html>
