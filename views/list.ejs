@@ -5,22 +5,26 @@
         <title>ToDO App</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/styles/styles.css">
     </head>
     <body>
-        <h1><%= kindofDay %></h1> 
+        <div class="box" id="heading">
+            <h1><%= kindofDay %></h1>       
+        </div>
+        <div class="box">
+            <%  for (var i=0; i<newListItems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                    <p><%= newListItems[i] %> </p> 
+            </div>   
+            <% } %>  
         
-    <ul>
-       <%  for (var i=0; i<newListItems.length; i++){ %>
-            <li><%= newListItems[i] %> </li>    
-       <% } %>  
-    </ul>
+            <form class="item" action="/" method="POST">
         
-    <form class="" action="/" method="POST">
+                <input type="text" name="newitem" placeholder="Type New Item" autocomplete="off">
         
-        <input type="text" name="newitem">
-
-        <button type="submit" name="button">Add</button>
-    </form>
+                <button type="submit" name="button">+</button>
+            </form>
+        </div>
     </body>
 </html>
