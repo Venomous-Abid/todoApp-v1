@@ -4,8 +4,8 @@ const date = require(__dirname + "/date.js");
 
 const app = express();
 
-let items =["Buy Food","Cook Food","Eat Food"];
-let workItems=[];
+const items =["Buy Food","Cook Food","Eat Food"];
+const workItems=[];
 
 app.set('view engine', 'ejs');
 
@@ -14,7 +14,8 @@ app.use(express.static("public"));
 
 app.get("/", function(req,res){
     //from Custom Date Module
-    let day = Date();
+    let day = date.getDate();
+    console.log(day);
     res.render("List",{
         listTitle: day,
         newListItems: items
@@ -23,7 +24,7 @@ app.get("/", function(req,res){
 
 app.post("/", function(req, res){
     console.log(req.body);
-    var item = req.body.newitem;
+    const item = req.body.newitem;
 
     if (req.body.list == "Work"){
          workItems.push(item);
@@ -44,7 +45,7 @@ app.get("/work", function(req,res){
 
 
 app.post("/work", function(req, res){
-    var item = req.body.newitem;
+    const item = req.body.newitem;
     workItems.push(item);
     res.redirect("/work");
 });
